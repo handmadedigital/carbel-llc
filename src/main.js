@@ -8,6 +8,10 @@ import App from './components/App.vue'
 import Home from './components/Home.vue'
 import About from './components/About.vue'
 import Quote from './components/Quote.vue'
+import ContactSection from './components/ContactSection.vue'
+import Contact from './components/Contact.vue'
+import Warehouse from './components/Warehouse.vue'
+import Service from './components/Service.vue'
 
 // Install plugins
 Vue.use(Router)
@@ -29,6 +33,22 @@ router.map({
   '/quote':{
     name: 'quote',
     component: Quote
+  },
+  '/contact-section':{
+    name: 'contact-section',
+    component: ContactSection
+  },
+  '/contact':{
+    name: 'contact',
+    component: Contact
+  },
+  '/warehouse':{
+    name: 'warehouse',
+    component: Warehouse
+  },
+  '/service':{
+    name: 'service',
+    component: Service
   }
 })
 

@@ -1,0 +1,19 @@
+{
+  "database": {
+    "rules": "database.rules.json"
+  },
+  "hosting": {
+    "public": "dist",
+    "rewrites": [
+      {
+        "source": "**",
+        "destination": "/index.html"
+      }
+    ],
+    "redirects": [ {
+    	"source" : "/firebase/*",
+    	"destination" : "https://www.firebase.com",
+    	"type" : 302
+    } ]
+  }
+}

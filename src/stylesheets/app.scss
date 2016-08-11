@@ -1,10 +1,171 @@
 /** IMPORTS **/
-@import '~foundation-sites/scss/foundation.scss';
-@include foundation-everything;
-@include foundation-flex-grid; // Remove this if you want the regular float grid
 @import "./variables.scss";
+@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
+@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,900italic,900,700,700italic,600italic,600,300italic,300,200italic,200,400italic);
 
 /** GLOBALS **/
 body{
   color: $black;
+  margin: 0;
+  overflow-x: hidden;
+}
+
+.p{
+
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: 'Montserrat', sans-serif;
+}
+
+p, a, ul, ol {
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+.btn {
+  padding-top: 10px;
+  padding-right: 10px;
+  padding-bottom: 10px;
+  padding-left: 10px;
+
+  background: #999;
+  border: 0;
+
+  color: #fff;
+  font-family: 'Source Sans Pro', sans-serif;
+
+  &.lg {
+    padding-top: 12px;
+    padding-right: 30px;
+    padding-bottom: 12px;
+    padding-left: 30px;
+  }
+
+  &.outline {
+    background: rgba(0,0,0,0);
+    border: 2px solid #fff;
+    color: #fff;
+  }
+}
+
+.input-style {
+  background: #f3f3f3;
+  border: 0;
+
+  padding-top: 10px;
+  padding-right: 10px;
+  padding-bottom: 10px;
+  padding-left: 10px;
+
+  margin-top: 10px;
+  margin-bottom: 10px;
+
+  font-size: 16px;
+  font-weight: 300;
+  font-style: italic;
+}
+
+.textarea-style {
+  min-height: 160px;
+  background: #f3f3f3;
+  border: 0;
+
+  padding-top: 10px;
+  padding-right: 10px;
+  padding-bottom: 10px;
+  padding-left: 10px;
+
+  margin-top: 10px;
+  margin-bottom: 10px;
+
+  font-size: 16px;
+  font-weight: 300;
+  font-style: italic;
+}
+
+.center {
+  text-align: center;
+  margin: 0 auto;
+}
+
+.flex-row {
+  display: flex;
+
+  @media screen and (max-width: $mobile-lg) {
+    flex-direction: column;
+  }
+
+  .half-column {
+    flex: 0 50%;
+    margin: 0 20px;
+
+    @media screen and (max-width: $mobile-lg) {
+      flex: 0 100%;
+    }
+  }
+}
+
+.floating-section-wrapper {
+  display: flex;
+  justify-content: center;
+
+  .floating-section {
+    box-shadow: 0px 0px 107px -4px rgba(0, 0, 0, 0.61);
+    background: #fff;
+
+    width: 100%;
+    max-width: 60%;
+    position: relative;
+
+    padding-top: 4%;
+    padding-right: 4%;
+    padding-bottom: 4%;
+    padding-left: 4%;
+
+    margin-top: -5%;
+    margin-bottom: 100px;
+
+    &.video-section {
+      padding: 0;
+
+      video {
+        margin-bottom: -3.8px;
+      }
+    }
+
+   .section-title {
+     font-size: 48px;
+     color: #2baa46;
+
+     margin-top: 0;
+     margin-bottom: 60px;
+
+     @media screen and (max-width: $mobile-lg) {
+       font-size: 32px;
+     }
+   }
+
+   .section-desc {
+     font-size: 18px;
+     color: #6f6f6f;
+
+     padding-left: 8%;
+
+     @media screen and (max-width: $mobile-lg) {
+       font-size: 16px;
+       padding-left: 0;
+     }
+   }
+
+   .section-btn {
+     margin-top: 5%;
+     float: right;
+
+     .btn {
+       background-color: #2baa46;
+       font-size: 18px;
+     }
+   }
+
+  }
 }
